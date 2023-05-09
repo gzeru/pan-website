@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mystudent.firstname }} {{ mystudent.lastname }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ mystudent.firstname }} {{ mystudent.lastname }}</h1>
+  
+  <p>Phone {{ mystudent.phone }}</p>
+ <!-- <p>Student since: {{ mystudent.joined_date }}</p>
+  <p>Year in school: {{ mystudent.year_in_school }}</p>
+
+ <p>Year in school: {{ mystudent.get_year_in_school_display }}</p> -->
+
+  <p>Gender: {{ mystudent.get_gender_display }}</p>
+  <p>department: {{ mystudent.department }}</p>
+  <p>no_of_course_years: {{ mystudent.get_no_of_course_years_display}}</p>
+  <p>year_of_graduation {{ mystudent.year_of_graduation}}</p>
+
+  <p>Back to <a href="/students">Students</a></p>
+  
+{% endblock %}

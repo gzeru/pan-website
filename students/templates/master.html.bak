@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  {% load bootstrap_icons %}
+  {% load social_widgets %}
+</head>
+<body>
+    <br>
+<div class="container">
+<header id="top">
+    <!-- Static navbar -->
+    <div class="navbar-id">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-8 col-md-7">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-4 col-lg-3">
+                        	<div class="image">
+                                <img src="/media/pics/bduethiopia.jpg" class="img-fluid" alt="logo">
+		                    </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-lg-9">
+                            <div class="navbar-claim">
+                                <h3>POLY-PEDA-BDU Alumni Association</h3>
+                            </div>
+
+                       </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-5">
+                            <div class="navbar-search">
+
+                             <form class="form-inline" role="form" action="{% url 'index' %}" method="get" name="q">
+                                 {% csrf_token %}
+                                  <div class="input-group">
+                                      <input type="text" class="form-control input-sm" name="q" placeholder="Search For Member" aria-label="Search">
+                                      <span class="input-group-btn">
+                                          <button class="btn btn-default input-sm" type="submit">
+                                               <span class="glyphicon glyphicon-search"></span>
+                                              {% bs_icon 'search' size='1.5em' %}
+                                          </button>
+                                      </span>
+                                  </div>
+                              </form>
+
+
+<!--
+        <form class="d-flex" role="search">
+        <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+-->
+<!-- ----------------------------------------------------------------------------------------------- -->
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+  <ul class="nav bg-info">
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="students/">STUDENTS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="link1/">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="students/link2">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/blog">Blog</a>
+    </li>
+
+  </ul>
+
+  {% block content %}
+  {% endblock %}
+
+
+
+
+</div>
+   <!-- ---------------------------------------------- -->
+    <div class="footer" style="background-color:#F0F0F0;">
+    <div class="container">
+        <div class="row footer-content">
+            <div class="col-md-3 hidden-sm hidden-xs">
+        <!--        <h3>POLY-PEDA-BDU Association</h3> -->
+                    <h3>Kontakt</h3>
+            <!--    <ul>
+                    <li><a href="de/produkte/produktportfolio/">Produkte</a></li>
+                    <li><a href="de/psi-energymanagement/uebersicht/">Energie</a></li>
+                    <li><a href="de/psi-productionmanagement/uebersicht/">Produktion</a></li>
+                    <li><a href="de/psi-group/profile/">Konzern</a></li>
+                    <li><a href="de/psi-investor-relations/uebersicht/">Investor Relations</a></li>
+                    <li><a href="de/psi-pressevents/uebersicht/">News &amp; Events</a></li>
+                    <li><a href="de/blog/psi-blog/"><i class="fa fa-comments fa-fw"></i> Blog</a></li>
+                    <li><a href="de/psi-career/uebersicht/">Karriere</a></li>
+                    <li><a href="https://appstore.psi-cloud.com" target="_blank">PSI App Store</a></li>
+                </ul> -->
+            </div>
+            <div class="col-xs-6 col-md-3">
+           <!--     <h3>Kontakt</h3> -->
+	<!--  CONTENT ELEMENT, uid:102590/shortcut [begin] -->
+		<div class="csc-default">
+		<!--  Inclusion of other records (by reference): [begin] -->
+
+
+
+	<!--
+
+		BEGIN: Content of extension "tt_address", plugin "tx_ttaddress_pi1"
+
+	-->
+	<div class="tx-ttaddress-pi1">
+<!--
+	<div class="vcard">
+		<div class="row">
+			<div class="col-md-12 col-sm-9">
+
+				<div class="fn">PSI Software AG  </div>
+
+
+					<div class="adr">
+						<div class="street-address" itemprop="streetAddress">Dircksenstraße 42-44</div>
+						 <span class="postal-code" itemprop="postalCode">10178 </span> <span class="locality" itemprop="addressLocality">Berlin </span><br>
+
+					</div>
+
+				<div class="tel phone" item="telephone"><span><i class="fa fa-phone fa-fw fa-margin-right"></i>+49 30 2801-0</span></div>
+
+				<div class="email"><i class="fa fa-envelope-o fa-fw fa-margin-right"></i><a href="mailto:info@psi.de" class="email" item="email">info@psi.de</a></div>
+
+			</div>
+		</div>
+	</div>
+
+-->
+
+	</div>
+
+	<!-- END: Content of extension "tt_address", plugin "tx_ttaddress_pi1" -->
+
+
+		<!--  Inclusion of other records (by reference): [end] -->
+			</div>
+	<!--  CONTENT ELEMENT, uid:102590/shortcut [end] -->
+	<!-- 	<ul>
+            <li><a href="de/kontakt/">Kontakt</a></li>
+          <li><a href="de/no-cache/psi-search/">Suche</a></li>
+            <li><a href="de/psi-sitemap/">Sitemap</a></li>
+            <li><a href="de/impressum/">Impressum</a></li>
+            <li><a href="de/datenschutz/">Datenschutz</a></li>
+            <li><a href="de/datenschutz-social-media/">Datenschutz Social Media</a></li>
+        </ul> -->
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <h3>News</h3>
+<!--
+<div class="news-latest-container">
+
+    <div class="news-latest-item"><span class="news-latest-date">02.05.2023</span>&nbsp;| <a href="de/psi-pressevents/releases-archive/artikel/article/psi-automotive-industry-mit-sonderpreis-fuer-die-zukunftsfaehigkeit-der-architektur-ausgezeichnet/" title="PSI Automotive &amp; Industry mit Sonderpreis für die Zukunftsfähigkeit der Architektur ausgezeichnet">PSI Automotive &amp; Industry mit Sonderpreis für die Zukunftsfähigkeit der Architektur ausgezeichnet</a>
+	</div>
+
+    <div class="news-latest-item"><span class="news-latest-date">28.04.2023</span>&nbsp;| <a href="de/psi-pressevents/releases-archive/artikel/article/psi-praesentiert-intelligente-softwareloesungen-auf-der-e-world-2023/" title="PSI präsentiert intelligente Softwarelösungen auf der E-world 2023">PSI präsentiert intelligente Softwarelösungen auf der E-world 2023</a>
+	</div>
+
+</div> -->
+
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2021 Copyright:
+         <!-- <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
+
+          <a class="text-reset fw-bold" > POLY-PEDA-BDU Alumni Association </a>
+        </div>
+
+</body>
+</html>

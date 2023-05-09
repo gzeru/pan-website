@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  {% load bootstrap_icons %}
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-7">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <!--        <div class="navbar-logo">
+                                <a href="de/home/"><picture><source srcset="typo3temp/_processed_/9/6/csm_psi-logo_d1f685fa2f.png" media="(max-width: 479px)"><source srcset="typo3temp/_processed_/9/6/csm_psi-logo_8ad17f108b.png" media="(min-width: 480px)"><source srcset="typo3temp/_processed_/9/6/csm_psi-logo_7908fbe87e.png" media="(min-width: 780px)"><img src="typo3conf/ext/psi/Resources/Public/Img/psi-logo.png" alt="PSI AG"></picture></a>
+                            </div> -->
+                        	<div class="image">
+
+                                <img src="media/pics/bduethiopia.jpg" class="img-fluid" alt="logo">
+		                    </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-lg-9">
+                            <div class="navbar-claim">
+                                <p>POLY-PEDA-BDU Alumni Association</p>
+                            </div>
+                        </div>
+                 <!--                        <div class="col-xs-12 col-sm-4 col-md-5">-->
+                    <div class="navbarAdd hidden-xs">
+
+                        <div class="navbar-search">
+                            <form class="form-inline" role="form" action="/de/psi-search/" method="get" name="tx_indexedsearch_top">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" name="tx_kesearch_pi1[sword]" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default input-sm" type="submit">
+                                            <!--<span class="glyphicon glyphicon-search"></span>-->
+                                            {% bs_icon 'search' size='1.5em' %}
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                    </div>
+                 <!--  </div>-->
+
+                    </div>
+                </div>
+                       </div>
+            </div>
+
+  <ul class="nav bg-info">
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/members">MEMBERS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/members/link1">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/members/link2">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/blog">Blog</a>
+    </li>
+
+  </ul>
+
+  {% block content %}
+  {% endblock %}
+</div>
+</body>
+</html>
