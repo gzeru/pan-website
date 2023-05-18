@@ -41,3 +41,10 @@ class Student(models.Model):
     YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year -7)]
 
     year_of_graduation = models.IntegerField(('Year Of Graduation'), choices=YEAR_CHOICES, default=datetime.datetime.now().year -8)
+    INSTITUE_CHOICES = (
+        ('POLY', 'Bahr Dar Polytechnic Institute'),
+        ('PEDA', 'Bahr Dar Pedagogy'),
+        ('BDU', 'Bahr Dar University'),
+    )
+    graduated_from = models.CharField(max_length=20, choices=INSTITUE_CHOICES, default='BDU')
+

@@ -3,7 +3,7 @@
 <html>
 <head>
   <title>{% block title %}{% endblock %}</title>
-  {% load bootstrap5 %}
+  {% load django_bootstrap5 %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
   {% load bootstrap_icons %}
@@ -44,11 +44,12 @@
                                  {% csrf_token %}
                                   <div class="input-group">
                                       <input type="text" class="form-control input-sm" name="q" placeholder="Search For Student" aria-label="Search">
-                                      <span class="input-group-btn">
-                                          <button class="btn btn-default input-sm" type="submit">
+                                       <span class="input-group-btn">
+                                          <button>Search</button>
+                                            <!--<button class="btn btn-default input-sm" type="submit">
                                                <span class="glyphicon glyphicon-search"></span>
-                                              {% bs_icon 'search' size='1.5em' %}
-                                          </button>
+                                               {% bs_icon 'search' size='1.5em' %}
+                                          </button>-->
                                       </span>
                                   </div>
                               </form>
@@ -60,7 +61,6 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
 -->
-<!-- ----------------------------------------------------------------------------------------------- -->
                        </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
       <a class="nav-link link-light" href="/">HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link link-light" href="/students">STUDENTS</a>
+      <a class="nav-link link-light" href="/students/">STUDENTS</a>
     </li>
     <li class="nav-item">
       <a class="nav-link link-light" href="/students/link1/">About Us</a>
@@ -86,6 +86,9 @@
     </li>
     <li class="nav-item">
       <a class="nav-link link-light" href="/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/admin/">Admin</a>
     </li>
 
   </ul>
@@ -97,27 +100,11 @@
 
 
 </div>
-   <!-- ---------------------------------------------- -->
-    <div class="footer" style="background-color:#F0F0F0;">
-    <div class="container">
+<div class="footer">
+    <div class="container bg-info nav-link link-light">
         <div class="row footer-content">
-            <div class="col-md-3 hidden-sm hidden-xs">
-        <!--        <h3>POLY-PEDA-BDU Association</h3> -->
-                    <h3>Kontakt</h3>
-            <!--    <ul>
-                    <li><a href="de/produkte/produktportfolio/">Produkte</a></li>
-                    <li><a href="de/psi-energymanagement/uebersicht/">Energie</a></li>
-                    <li><a href="de/psi-productionmanagement/uebersicht/">Produktion</a></li>
-                    <li><a href="de/psi-group/profile/">Konzern</a></li>
-                    <li><a href="de/psi-investor-relations/uebersicht/">Investor Relations</a></li>
-                    <li><a href="de/psi-pressevents/uebersicht/">News &amp; Events</a></li>
-                    <li><a href="de/blog/psi-blog/"><i class="fa fa-comments fa-fw"></i> Blog</a></li>
-                    <li><a href="de/psi-career/uebersicht/">Karriere</a></li>
-                    <li><a href="https://appstore.psi-cloud.com" target="_blank">PSI App Store</a></li>
-                </ul> -->
-            </div>
-            <div class="col-xs-6 col-md-3">
-           <!--     <h3>Kontakt</h3> -->
+            <div class="col-xs-6 col-md-6">
+                <h3>Kontakt</h3>
 	<!--  CONTENT ELEMENT, uid:102590/shortcut [begin] -->
 		<div class="csc-default">
 		<!--  Inclusion of other records (by reference): [begin] -->
@@ -130,29 +117,30 @@
 
 	-->
 	<div class="tx-ttaddress-pi1">
-<!--
+
 	<div class="vcard">
 		<div class="row">
 			<div class="col-md-12 col-sm-9">
 
-				<div class="fn">PSI Software AG  </div>
+				<div class="fn">POLY-PEDA-BDU Alumni Association  </div>
 
 
 					<div class="adr">
-						<div class="street-address" itemprop="streetAddress">Dircksenstraße 42-44</div>
-						 <span class="postal-code" itemprop="postalCode">10178 </span> <span class="locality" itemprop="addressLocality">Berlin </span><br>
+						<div class="street-address" itemprop="streetAddress">street-address</div>
+						 <span class="postal-code" itemprop="postalCode">postal-code</span>
+                        <span class="locality" itemprop="addressLocality">locality</span><br>
 
 					</div>
 
-				<div class="tel phone" item="telephone"><span><i class="fa fa-phone fa-fw fa-margin-right"></i>+49 30 2801-0</span></div>
+				<div class="tel phone" item="telephone"><span><i class="fa fa-phone fa-fw fa-margin-right"></i>telephone</span></div>
 
-				<div class="email"><i class="fa fa-envelope-o fa-fw fa-margin-right"></i><a href="mailto:info@psi.de" class="email" item="email">info@psi.de</a></div>
+				<!--<div class="email"><i class="fa fa-envelope-o fa-fw fa-margin-right"></i><a href="#" class="email" item="email">email</a></div> -->
 
 			</div>
 		</div>
 	</div>
 
--->
+
 
 	</div>
 
@@ -162,27 +150,21 @@
 		<!--  Inclusion of other records (by reference): [end] -->
 			</div>
 	<!--  CONTENT ELEMENT, uid:102590/shortcut [end] -->
-	<!-- 	<ul>
-            <li><a href="de/kontakt/">Kontakt</a></li>
-          <li><a href="de/no-cache/psi-search/">Suche</a></li>
-            <li><a href="de/psi-sitemap/">Sitemap</a></li>
-            <li><a href="de/impressum/">Impressum</a></li>
-            <li><a href="de/datenschutz/">Datenschutz</a></li>
-            <li><a href="de/datenschutz-social-media/">Datenschutz Social Media</a></li>
-        </ul> -->
+		<!--<ul><li><a href="de/kontakt/">Kontakt</a></li><li><a href="de/no-cache/psi-search/">Suche</a></li><li><a href="de/psi-sitemap/">Sitemap</a></li><li><a href="de/impressum/">Impressum</a></li><li><a href="de/datenschutz/">Datenschutz</a></li><li><a href="de/datenschutz-social-media/">Datenschutz Social Media</a></li></ul>-->
             </div>
             <div class="col-xs-6 col-md-3">
-                <h3>News</h3>
-<!--
+                <h3>Links</h3>
 <div class="news-latest-container">
-
-    <div class="news-latest-item"><span class="news-latest-date">02.05.2023</span>&nbsp;| <a href="de/psi-pressevents/releases-archive/artikel/article/psi-automotive-industry-mit-sonderpreis-fuer-die-zukunftsfaehigkeit-der-architektur-ausgezeichnet/" title="PSI Automotive &amp; Industry mit Sonderpreis für die Zukunftsfähigkeit der Architektur ausgezeichnet">PSI Automotive &amp; Industry mit Sonderpreis für die Zukunftsfähigkeit der Architektur ausgezeichnet</a>
+<!-- ---------
+    <a href="https://mail.bdu.edu.et/owa" title="">Bahir Dar University Mail service</a>
+---------- -->
+    <div class="news-latest-item"><a href="https://www.bdu.edu.et" title="">Bahir Dar University</a>
 	</div>
-
-    <div class="news-latest-item"><span class="news-latest-date">28.04.2023</span>&nbsp;| <a href="de/psi-pressevents/releases-archive/artikel/article/psi-praesentiert-intelligente-softwareloesungen-auf-der-e-world-2023/" title="PSI präsentiert intelligente Softwarelösungen auf der E-world 2023">PSI präsentiert intelligente Softwarelösungen auf der E-world 2023</a>
+<!--
+    <div class="news-latest-item"><span class="news-latest-date">09.05.2023</span>&nbsp;| <a href="de/psi-pressevents/releases-archive/artikel/article/psi-erforscht-mit-partnern-im-projekt-idea-das-automatisierte-fahren-in-bus-depots/" title="PSI erforscht mit Partnern im Projekt IDEA das automatisierte Fahren in Bus-Depots">PSI erforscht mit Partnern im Projekt IDEA das automatisierte Fahren in Bus-Depots</a>
 	</div>
-
-</div> -->
+-->
+</div>
 
             </div>
             <div class="col-md-3 hidden-sm hidden-xs">
@@ -191,8 +173,9 @@
         </div>
     </div>
 </div>
-<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2021 Copyright:
+<div class="container text-center p-4  nav-link link-light bg-info">
+<!--<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">-->
+          © 2023 Copyright:
          <!-- <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
 
           <a class="text-reset fw-bold" > POLY-PEDA-BDU Alumni Association </a>

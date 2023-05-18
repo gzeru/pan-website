@@ -7,18 +7,60 @@
 
 {% block content %}
   <h1>{{ mystudent.firstname }} {{ mystudent.lastname }}</h1>
-  
-  <p>Phone {{ mystudent.phone }}</p>
- <!-- <p>Student since: {{ mystudent.joined_date }}</p>
-  <p>Year in school: {{ mystudent.year_in_school }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Phone:</p>
+    </div>
+    <div class="col-sm-8">
+       <p>{{ mystudent.phone }}</p>
+    </div>
+  </div>
 
- <p>Year in school: {{ mystudent.get_year_in_school_display }}</p> -->
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Gender:</p>
+    </div>
+    <div class="col-sm-8">
+       <p>{{ mystudent.get_gender_display}}</p>
+    </div>
+  </div>
 
-  <p>Gender: {{ mystudent.get_gender_display }}</p>
-  <p>department: {{ mystudent.department }}</p>
-  <p>no_of_course_years: {{ mystudent.get_no_of_course_years_display}}</p>
-  <p>year_of_graduation {{ mystudent.year_of_graduation}}</p>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Department:</p>
+    </div>
+    <div class="col-sm-8">
+       <p>{{ mystudent.department}}</p>
+    </div>
+  </div>
 
-  <p>Back to <a href="/students">Students</a></p>
-  
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Course Years:</p>
+    </div>
+    <div class="col-sm-8">
+       <p>{{ mystudent.get_no_of_course_years_display}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Graduation Year:</p>
+    </div>
+    <div class="col-sm-8">
+       <p>{{ mystudent.year_of_graduation}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Graduated from:</p>
+    </div>
+    <div class="col-sm-8">
+       <p>{{ mystudent.get_graduated_from_display}}</p>
+    </div>
+  </div>
+
+</div>
+
 {% endblock %}
